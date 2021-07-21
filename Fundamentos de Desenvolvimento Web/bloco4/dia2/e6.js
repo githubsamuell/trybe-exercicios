@@ -11,4 +11,4 @@ if (result === 0) {
   console.log('nenhum valor ímpar encontrado');
 } else {
   console.log(result);
-}
+} 

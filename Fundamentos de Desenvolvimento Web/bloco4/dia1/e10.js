@@ -8,4 +8,4 @@ if (costOfProduct >= 0 && saleValue >= 0) {
   console.log(totalProfit);
 } else {
   console.log("Error, os valores não podem ser negativos");
-};
+}; 

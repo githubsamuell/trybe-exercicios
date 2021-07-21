@@ -15,4 +15,4 @@ if (grade < 0 || grade > 100) {
   console.log("E");
 } else {
   console.log("F");
-}
+} 

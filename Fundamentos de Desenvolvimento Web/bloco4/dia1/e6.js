@@ -21,5 +21,5 @@ switch (chessPiece.toLowerCase()) {
     break;
   default:
     console.log('Erro, peça inválida!');
-    break;
+    break; 
 };

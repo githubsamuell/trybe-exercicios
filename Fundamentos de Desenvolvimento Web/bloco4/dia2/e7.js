@@ -10,4 +10,4 @@ for (let index = 1; index < numbers.length; index += 1) {
   }
 }
 
-console.log(smallestNumber);
+console.log(smallestNumber); 

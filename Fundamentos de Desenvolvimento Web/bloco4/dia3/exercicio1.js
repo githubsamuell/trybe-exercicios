@@ -8,4 +8,4 @@ for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
 };
 for (let lineIndex = 0; lineIndex < n; lineIndex += 1) {
   console.log(inputLine);
-};
+}; 
