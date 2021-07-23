@@ -1,26 +1,39 @@
 import './App.css';
 
-function buttonExec() {
-  console.log('Voce Clicou')
-}
+class App extends React.Component  {
+  constructor(){
+    super()
 
-function buttonExecu() {
-  console.log('Clicastes')
-} 
+    this.buttonExec = this.buttonExec.bind(this);
+    this.buttonExecu = this.buttonExecu.bind(this);
+    this.buttonExecut = this.buttonExecut.bind(this);
+  }
 
-function buttonExecut() {
-  console.log('Clicastes')
-} 
+  function buttonExec() {
+    console.log(this);
+    console.log('Voce Clicou');
+  }
+  
+  function buttonExecu() {
+    console.log(this);
+    console.log('Clicastes');
+  } 
+  
+  function buttonExecut() {
+    console.log(this);
+    console.log('Clicastes');
+  } 
 
-function App() {
+  render() {
   return (
     <div className="App">
-      <button onClick={buttonExec}>Butones</button>
-      <button onClick={buttonExecu}>Buto</button>
-      <button onClick={buttonExecut}>Botao</button>
+      <button onClick={this.buttonExec}>Butones</button>
+      <button onClick={this.buttonExecu}>Buto</button>
+      <button onClick={this.buttonExecut}>Botao</button>
 
     </div>
   );
+  }
 }
 
 export default App;
