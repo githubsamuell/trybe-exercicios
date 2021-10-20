@@ -70,3 +70,54 @@ FROM
     employees
 GROUP BY DEPARTMENT_ID
 HAVING Q_EMPLOYEES > 10; 
+
+-- 11. Escreva uma query que atualize a coluna PHONE_NUMBER , de modo que todos os telefones iniciados por 515 agora devem iniciar com 777 .
+-- 12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
+-- 13. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e ano no qual foi contratado (exiba somente o ano).
+-- 14. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).
+-- 15. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e mês no qual foi contratado (exiba somente o mês).
+-- 16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.
+-- 17: Escreva uma query que exiba o sobrenome e a data de contratação de todos os funcionário contratados em julho de 1987.
+-- 18: Escreva uma query que exiba as seguintes informações de cada funcionário: nome , sobrenome , tempo que trabalha na empresa (em dias) .
+SELECT 
+    *
+FROM
+    employees;
+UPDATE hr.employees 
+SET 
+    PHONE_NUMBER = REPLACE(PHONE_NUMBER, '515', '777')
+WHERE
+    PHONE_NUMBER LIKE '515%';
+set SQL_SAFE_UPDATES = 0;
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    CHAR_LENGTH(FIRST_NAME) >= 8;
+SELECT 
+    EMPLOYEE_ID, FIRST_NAME, YEAR(HIRE_DATE)
+FROM
+    employees;
+SELECT 
+    EMPLOYEE_ID, FIRST_NAME, DAY(HIRE_DATE)
+FROM
+    employees;
+SELECT 
+    EMPLOYEE_ID, FIRST_NAME, MONTH(HIRE_DATE)
+FROM
+    employees;
+SELECT 
+    UCASE(CONCAT(FIRST_NAME, ' ', LAST_NAME)) AS FULL_NAME
+FROM
+    employees;
+SELECT 
+    LAST_NAME, HIRE_DATE
+FROM
+    employees
+WHERE
+    HIRE_DATE LIKE '1987-07%';
+SELECT 
+    FIRST_NAME, LAST_NAME, (CURRENT_DATE() - HIRE_DATE) AS QDAYS
+FROM
+    employees;
