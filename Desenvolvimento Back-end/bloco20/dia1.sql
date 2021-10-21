@@ -50,3 +50,64 @@ FROM
     Theater t
         RIGHT JOIN
     Movies m ON t.id = m.theater_id;
+SELECT 
+    m.title, b.rating
+FROM
+    Movies m
+        INNER JOIN
+    BoxOffice b ON b.rating > 7.5;
+SELECT 
+    m.title, b.rating
+FROM
+    Movies m,
+    BoxOffice b
+WHERE
+    m.id IN (SELECT 
+            movie_id
+        FROM
+            BoxOffice
+        WHERE
+            rating > 7.5);
+SELECT 
+    m.title, b.rating
+FROM
+    Movies m,
+    BoxOffice b
+WHERE
+    b.movie_id IN (SELECT 
+            id
+        FROM
+            Movies
+        WHERE
+            year > 2009);
+SELECT 
+    b.rating, m.title
+FROM
+    BoxOffice b
+        INNER JOIN
+    Movies m ON b.movie_id = m.id
+WHERE
+    m.year > 2009;
+SELECT 
+    t.name, t.location
+FROM
+    Theater t
+WHERE
+    EXISTS( SELECT 
+            *
+        FROM
+            Movies m
+        WHERE
+            m.theater_id = t.id);
+SELECT 
+    t.name, t.location
+FROM
+    Theater t
+WHERE
+    NOT EXISTS( SELECT 
+            *
+        FROM
+            Movies m
+        WHERE
+            m.theater_id = t.id);
+    
