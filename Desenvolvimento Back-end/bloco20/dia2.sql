@@ -110,4 +110,4 @@ WHERE
             Movies m
         WHERE
             m.theater_id = t.id);
-    
+
