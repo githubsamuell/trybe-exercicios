@@ -2,7 +2,7 @@ import { ErrorRequestHandler } from "express";
 
 import joi from 'joi'
 
-const joiError: ErrorRequestHandler = (err, req, res, next) => {
+const joiError: ErrorRequestHandler = (err, _req, res, next) => {
     if (!joi.isError(err)) {
         return next(err)
     }
