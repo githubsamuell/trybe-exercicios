@@ -1,4 +1,5 @@
 import restauranteModel from '../models/restaurants';
+import Restaurante from '../interfaces/restaurant';
 
 const findAll = async () => {
     const restaurants = await restauranteModel.findAll();
@@ -11,7 +12,12 @@ const findById = async (id: string) => {
     return resturantById
 
 }
+
+const create = async (newRestaurant: Restaurante) => {
+    await restauranteModel.create(newRestaurant);
+}
 export default {
     findAll,
-    findById
+    findById,
+    create
 };
