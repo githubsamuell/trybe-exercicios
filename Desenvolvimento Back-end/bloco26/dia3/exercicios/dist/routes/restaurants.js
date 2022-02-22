@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const verifyRestaurants_1 = require("../middlewares/verifyRestaurants");
+const restaurants_1 = require("../controllers/restaurants");
+const restaurantesRoute = (0, express_1.Router)();
+restaurantesRoute.get('/', restaurants_1.findAll);
+restaurantesRoute.get('/:id', restaurants_1.findById);
+restaurantesRoute.post('/', verifyRestaurants_1.verifyRestaurant, restaurants_1.create);
+exports.default = restaurantesRoute;

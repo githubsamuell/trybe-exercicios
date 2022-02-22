@@ -7,10 +7,10 @@ findAll,
 findById,
 } from '../controllers/restaurants';
 
-const restaurantes = Router();
+const restaurantesRoute = Router();
 
-restaurantes.get('/', findAll);
-restaurantes.get('/:id', findById);
-restaurantes.post('/', verifyRestaurant, create);
+restaurantesRoute.get('/', findAll);
+restaurantesRoute.get('/:id', findById);
+restaurantesRoute.post('/', verifyRestaurant, create);
 
-export default restaurantes;
+export default restaurantesRoute;
