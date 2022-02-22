@@ -5,6 +5,13 @@ const findAll = async () => {
     return restaurants;
 }
 
+const findById = async (id: string) => {
+    const restaurantId = Number(id);
+    const resturantById = await restauranteModel.findById(restaurantId);
+    return resturantById
+
+}
 export default {
-    findAll
+    findAll,
+    findById
 };
