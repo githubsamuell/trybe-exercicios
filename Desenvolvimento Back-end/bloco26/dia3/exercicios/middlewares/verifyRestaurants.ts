@@ -7,3 +7,6 @@ const verifyRestaurant: RequestHandler = (req, _res, next) => {
     if(error) throw error;
     next();
 } 
+export {
+    verifyRestaurant
+}
