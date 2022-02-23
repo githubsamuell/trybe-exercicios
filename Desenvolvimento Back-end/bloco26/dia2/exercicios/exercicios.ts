@@ -182,3 +182,25 @@ gol.stop();
 gol.openTheDoor(Doors.BEHIND_RIDE);
 gol.closeTheDoor(Doors.BEHIND_RIDE);
 gol.speedUp();
+
+type Slices = 4 | 6 | 8;
+
+    interface Pizza {
+        flavor: string;
+        slices: Slices;
+    }
+
+    const calabresa: Pizza = {
+        flavor: "calabresa",
+        slices: 4,
+    }
+
+    const quatroQueijos: Pizza = {
+        flavor: "quatroQueijos",
+        slices: 8,
+    }
+
+    const portuguesa: Pizza = {
+        flavor: "portugues",
+        slices: 6,
+    }
