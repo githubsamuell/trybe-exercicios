@@ -13,3 +13,10 @@ enum MesesDoAno {
     dezembro = 12,
 
 };
+
+enum EstaçãoClimaticaDoAno {
+    Outono = 1,
+    Inverno,
+    Primavera,
+    Verão,
+};
