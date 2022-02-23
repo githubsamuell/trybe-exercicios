@@ -142,9 +142,43 @@ class Car {
         }
     }
 
-    enum Color {
-        black = "black",
-        white = "white",
-        red = "red",
-        gray = "gray"
+    enum Colors {
+        BLACK = "Preta",
+        WHITE = "Branca",
+        RED = "Vermelha",
+        SILVER = "Prata"
     }
+
+
+    const gol = new Car("Volksvagem", Colors.SILVER, 4);
+
+gol.openTheDoor(Doors.DRIVER);
+gol.closeTheDoor(Doors.DRIVER);
+gol.turnOn();
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.LEFT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.RIGHT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.RIGHT);
+gol.speedDown();
+gol.stop();
+gol.openTheDoor(Doors.BEHIND_RIDE);
+gol.closeTheDoor(Doors.BEHIND_RIDE);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.RIGHT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.LEFT);
+gol.speedUp();
+gol.speedDown();
+gol.turn(Directions.RIGHT);
+gol.speedDown();
+gol.stop();
+gol.openTheDoor(Doors.BEHIND_RIDE);
+gol.closeTheDoor(Doors.BEHIND_RIDE);
+gol.speedUp();
