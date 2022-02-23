@@ -85,3 +85,66 @@ Object.entries(chosenHemisphereSeasons).map((entry) => {
 
     if (months.includes(month)) console.log(seasons);
 });
+
+
+enum Directions {
+    LEFT = "Esquerda",
+    RIGHT = "Direita",
+}
+
+
+enum Doors {
+    DRIVER = "Da pessoa motorista",
+    RIDE = "Da pessoa carona",
+    BEHIND_DRIVER = "De trás da pessoa motorista",
+    BEHIND_RIDE = "De trás da pessoa carona"
+}
+
+class Car {
+
+    _make: Color;
+    _color: string;
+    _doors: number = 4;
+
+        constructor(_make: string, colors: string, doors: number) {
+
+        }
+        turnOn(): void {
+            console.log("ligando carro");
+            
+        }
+        turnOf(): void {
+            console.log('Desligando carro');
+            
+        }
+        turn(direction: Directions): void {
+            console.log(`virando para a ${direction}`);
+            
+        }
+        speedUp(): void {
+            console.log('acelerando carro');
+            
+        }
+        speedDown(): void {
+            console.log('diminuido velocidade');
+            
+        }
+        stop(): void {
+            console.log('parando carro');
+            
+        }
+        openTheDoor(door: Doors): void {
+            this.validateDoors(door);
+        }
+        closeTheDoor(door: Doors): void {
+            this.validateDoors(door);
+            console.log(`Fechando a porta: ${door}.`);
+        }
+    }
+
+    enum Color {
+        black = "black",
+        white = "white",
+        red = "red",
+        gray = "gray"
+    }
