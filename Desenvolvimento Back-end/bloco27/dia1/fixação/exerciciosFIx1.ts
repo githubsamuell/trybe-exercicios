@@ -32,6 +32,7 @@ class Tv {
         }
       }
 
+
 }
 
 const tv1 = new Tv("LG", 32, "4K", ["HDMI", "internet", "wifi", "iot"], "cabo")
