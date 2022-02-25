@@ -41,3 +41,9 @@ export default class Person {
         if (Person.getAge(value) > 120) throw new Error('A pessoa deve ter no máximo 120 anos.');
     }
 }
+
+const maria = new Person("Maria da Consolação", new Date("1980/01/25"));
+const luiza = new Person("Luiza Andrade", new Date("2005/10/02"));
+
+console.log(maria);
+console.log(luiza);
