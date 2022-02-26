@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
