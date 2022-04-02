@@ -279,3 +279,6 @@ db.bios.find({_id: 8});
 
 use("bios")
 db.bios.find().count();
+
+use("bios")
+db.bios.find({_id: 8}, {_id: true, name: true});
