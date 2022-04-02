@@ -21,3 +21,6 @@ db.superheroes.find({"aspects.eyeColor": "green"});
 
 use("class")
 db.superheroes.find({"aspects.eyeColor": "blue"}).count();
+
+use("class")
+db.superheroes.find({"aspects.hairColor": { $in: ["No Hair", "Black"]}});
