@@ -30,3 +30,6 @@ db.superheroes.find({"aspects.hairColor": { $in: ["No Hair", "Black"]}}).count()
 
 use("class")
 db.superheroes.find({"aspects.hairColor": { $nin: ["No Hair", "Black"]}}).count();
+
+use("class")
+db.superheroes.find({"aspects.height": { $not: {$gt: 180}}});
