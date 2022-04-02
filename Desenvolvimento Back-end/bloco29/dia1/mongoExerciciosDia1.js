@@ -291,3 +291,6 @@ db.bios.find({"name.first": "John"}).pretty();
 
 use("bios")
 db.bios.find().limit(3).pretty();
+
+use("bios")
+db.bios.find().limit(2).skip(5).pretty();
