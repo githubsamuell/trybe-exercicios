@@ -18,3 +18,6 @@ db.superheroes.find({"aspects.height": { $gte: 200}}).count();
 
 use("class")
 db.superheroes.find({"aspects.eyeColor": "green"});
+
+use("class")
+db.superheroes.find({"aspects.eyeColor": "blue"}).count();
