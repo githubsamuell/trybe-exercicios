@@ -121,3 +121,8 @@ db.movies.find(
     budget: {$mod: [5,0]}
   }
 ).pretty()
+
+use("cinema")
+db.movies.find({
+  $or: [{category: {$all: ["sci-fi"]}},{ratings: {$elemMatch: {$gt: 199}}}]
+}, {_id: 0, title: 1, ratings: 1, category:1}).pretty()
