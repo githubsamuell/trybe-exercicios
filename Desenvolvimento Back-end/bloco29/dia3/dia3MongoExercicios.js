@@ -98,3 +98,16 @@ db.movies.find(
   }
 ).pretty()
 
+use("cinema")
+db.movies.find(
+  {
+    ratings: {
+      $size: 4
+    }
+  },
+  {
+    _id: 0,
+    title: 1
+      
+  }
+).pretty()
