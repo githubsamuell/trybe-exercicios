@@ -78,3 +78,9 @@ db.movies.updateOne({title: "Home Alone"}, {$currentDate: {lastUpdated: {$type: 
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateMany({}, {$set: {sequels: 0}})
+
+use("class")
+db.movies.find();
