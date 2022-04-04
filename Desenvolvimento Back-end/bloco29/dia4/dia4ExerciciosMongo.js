@@ -72,3 +72,9 @@ db.movies.updateOne({title: "Godzilla"}, {$set: {imdbRating: {$max:8.6}, "catego
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateOne({title: "Home Alone"}, {$currentDate: {lastUpdated: {$type: "timestamp"}}})
+
+use("class")
+db.movies.find();
