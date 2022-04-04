@@ -15,3 +15,13 @@ db.movies.insertMany([{
   "category": [ "family", "comedy" ],
   "imdbRating": 7.4
 }])
+
+use("class")
+db.movies.countDocuments();
+
+use("class")
+db.movies.updateOne({title: "Batman"}, {$set: {imdbRating: 7.7}})
+
+use("class")
+db.movies.find();
+
