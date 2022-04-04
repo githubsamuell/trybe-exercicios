@@ -54,3 +54,9 @@ db.movies.updateOne({title: "Batman"}, {$mul: {imdbRating: 4}})
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateOne({title: "Batman"}, {$rename: {budget: "estimatedBudget"}})
+
+use("class")
+db.movies.find();
