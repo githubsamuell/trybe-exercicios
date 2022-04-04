@@ -136,3 +136,9 @@ db.movies.find(
    {$or: [{category: {$all:["adventure"]}},{category: {$all:["family"]}}]}, {imdbRating: {$gte: 7}}
   ]}
 ).pretty()
+
+use("cinema")
+db.movies.find({description: {$regex: /^The/}})
+
+use("cinema")
+db.movies.find({description: {$regex: /humanity.$/}})
