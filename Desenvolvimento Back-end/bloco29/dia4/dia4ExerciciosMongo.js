@@ -60,3 +60,9 @@ db.movies.updateOne({title: "Batman"}, {$rename: {budget: "estimatedBudget"}})
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateOne({title: "Home Alone"}, {$min: {budget: 5}})
+
+use("class")
+db.movies.find();
