@@ -111,3 +111,13 @@ db.movies.find(
       
   }
 ).pretty()
+
+use("cinema")
+db.movies.find(
+  {
+    ratings: {
+      $size: 4
+    },
+    budget: {$mod: [5,0]}
+  }
+).pretty()
