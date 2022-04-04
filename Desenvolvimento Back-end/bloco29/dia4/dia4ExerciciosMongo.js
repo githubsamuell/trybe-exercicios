@@ -84,3 +84,9 @@ db.movies.updateMany({}, {$set: {sequels: 0}})
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateMany({}, {$unset: {budget: "", estimatedBudget: ""}})
+
+use("class")
+db.movies.find();
