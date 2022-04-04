@@ -60,3 +60,6 @@ db.movies.find({category: {$all: ["action"]}, imdbRating: {$gt: 7}}).pretty();
 
 use("cinema")
 db.movies.find({ratings: {$elemMatch: {$gt: 103}}}, {_id: 0, title: 1, ratings: 1}).pretty();
+
+use("cinema")
+db.movies.find({ratings: {$elemMatch: {$gte: 100, $lte: 105}}}, {_id: 0, title: 1, ratings: 1}).pretty();
