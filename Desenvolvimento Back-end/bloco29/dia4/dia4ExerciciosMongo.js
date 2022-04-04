@@ -66,3 +66,9 @@ db.movies.updateOne({title: "Home Alone"}, {$min: {budget: 5}})
 
 use("class")
 db.movies.find();
+
+use("class")
+db.movies.updateOne({title: "Godzilla"}, {$set: {imdbRating: {$max:8.6}, "category.1": "thriller"}})
+
+use("class")
+db.movies.find();
