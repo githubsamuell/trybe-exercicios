@@ -32,4 +32,19 @@ db.movies.insertMany([
 
 use("cinema");
 db.movies.updateOne({title: "Batman"}, {$push: {category: "superhero"}});
+
+
+use("cinema");
+db.movies.updateOne({title: "Batman"}, {$push: {category: {$each: ["vilain", "comic-based"]}}});
+
+
+use("cinema");
+db.movies.updateOne({title: "Batman"}, {$pop: {category: -1}});
+
+
+use("cinema");
+db.movies.updateOne({title: "Batman"}, {$pull: {category: "adventure"}});
+
+
+use("cinema");
 db.movies.find();
