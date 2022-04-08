@@ -1,6 +1,6 @@
 import express from "express";
 import connection from "./models/connection";
-import routesCountry from "./routes/CountryRoute";
+import routesCountry from "./routes/TournamentRoute";
 
 class App {
     public express: express.Application;
@@ -19,7 +19,7 @@ class App {
     }
 
     private routes() {
-        this.express.use('/country', routesCountry)
+        this.express.use('/tournaments', routesCountry)
     }
 }
 
