@@ -1,16 +1,16 @@
 import {model as createModel} from 'mongoose';
 
-import { ICountry, countrySchema } from '../Scheemas/CountryScheema';
+import { ICountry, countrySchema } from '../../Scheemas/CountryScheema';
 
-class CountryModel {
+class CountryModelgetAll {
     constructor(private countryModel = createModel<ICountry>('tournaments', countrySchema)){
         
     };
 
-    getAll = async (): Promise<ICountry[]> => {
+    handle = async (): Promise<ICountry[]> => {
         const countrys = await this.countryModel.find();
         return countrys;
     }
 }
 
-export default CountryModel;
+export default CountryModelgetAll;

@@ -1,11 +1,16 @@
 import { Router } from "express";
-import CountryController from "../controllers/CountryController";
+import CountryControllerFindByYear from "../controllers/tournaments/CountryControllerFindByYear";
+import CountryControllerGetAll from "../controllers/tournaments/CountryControllerGetAll";
+import CountryControllerGetALL from "../controllers/tournaments/CountryControllerGetAll";
 
 const routesCountry = Router();
 
-const countryController = new CountryController ();
+const countryGetAll = new CountryControllerGetAll();
 
-routesCountry.get('/', countryController.getAll);
+const countryFinByYear = new CountryControllerFindByYear();
+
+routesCountry.get('/', countryGetAll.handle);
+routesCountry.get('/:id', countryFinByYear.handle);
 
 export default routesCountry;
 
